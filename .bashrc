@@ -8,6 +8,12 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+# Initialize rbenv when available
+if [[ -d $HOME/.rbenv/bin ]]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
 alias sudo='sudo '  # sudo alias fix: http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias vi='vim'
 alias vim='nvim'
