@@ -34,7 +34,6 @@ fi
 
 alias abs='ABSROOT=. abs'
 alias makepkg="time CFLAGS='-Os' LDFLAGS='-Os' CPPFLAGS='-Os' CXXFLAGS='-Os' CFLAGS_APPEND='-Os' LDFLAGS_APPEND='-Os' CPPFLAGS_APPEND='-Os' CXXFLAGS_APPEND='-Os' MAKEFLAGS='-j8' makepkg: alert"
-alias minicom="MINICOM='-c on' minicom"
 
 alias beep="echo -ne \"\\007\""
 alias alert="beep;sleep 0.1;beep;sleep 0.1;beep;sleep 0.1;beep;sleep 0.1;beep"
