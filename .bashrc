@@ -33,7 +33,7 @@ fi
 
 
 alias abs='ABSROOT=. abs'
-alias makepkg="time CFLAGS='-Os' LDFLAGS='-Os' CPPFLAGS='-Os' CXXFLAGS='-Os' CFLAGS_APPEND='-Os' LDFLAGS_APPEND='-Os' CPPFLAGS_APPEND='-Os' CXXFLAGS_APPEND='-Os' MAKEFLAGS='-j8' makepkg: alert"
+alias makepkg="time CFLAGS='-Os' LDFLAGS='-Os' CPPFLAGS='-Os' CXXFLAGS='-Os' CFLAGS_APPEND='-Os' LDFLAGS_APPEND='-Os' CPPFLAGS_APPEND='-Os' CXXFLAGS_APPEND='-Os' MAKEFLAGS='-j8' makepkg; alert"
 alias startx='startx ~/.xinitrc'
 alias startx2go='startx x2go'
 
