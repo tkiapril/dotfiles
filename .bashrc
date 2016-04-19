@@ -16,6 +16,14 @@ if [[ -d $HOME/.rbenv/bin ]]; then
 fi
 
 
+DDVERSION=$(\dd --version | grep "^dd" | sed "s/dd (coreutils) //")
+DDVERSION_MAJOR=$(echo $DDVERSION | sed "s/.[0-9]\+//")
+DDVERSION_MINOR=$(echo $DDVERSION | sed "s/[0-9]\+.//")
+
+[[ $DDVERSION_MAJOR -gt 8 ]] && alias dd='dd status=progress'
+[[ $DDVERSION_MAJOR -eq 8 ]] && [[ $DDVERSION_MINOR -gt 23 ]] && alias dd='dd status=progress'
+
+
 alias sudo='sudo '  # sudo alias fix: http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 
 
